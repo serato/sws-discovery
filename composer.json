@@ -1,0 +1,24 @@
+{
+    "name": "serato/sws-discovery",
+    "homepage": "https://github.com/serato/app-events",
+    "description": "A PHP library for obtaining information about Serato web services.",
+    "type": "library",
+    "require": {
+        "php" : ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "phpstan/phpstan-phpunit": "^0.12.0",
+        "squizlabs/php_codesniffer": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Serato\\ServiceDiscovery\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Serato\\ServiceDiscovery\\Test\\": "tests/unit"
+        }
+    }
+}
