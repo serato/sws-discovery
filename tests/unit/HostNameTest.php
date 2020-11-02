@@ -99,15 +99,4 @@ class HostNameTest extends TestCase
             ['test', 12, HostName::IDENTITY, 'https://test-12'],
         ];
     }
-
-    /**
-     * Smoke test the HostName::getSwsHosts method
-     *
-     * @return void
-     */
-    public function testGetSwsHostsSmokeTest(): void
-    {
-        $hosts = new HostName('dev', 1);
-        $this->assertTrue(count($hosts->getSwsHosts()) > 1);
-    }
 }
