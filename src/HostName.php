@@ -238,21 +238,4 @@ class HostName
             );
         }
     }
-
-    /**
-     * Returns a key/value array of host names for all SWS web services.
-     *
-     * They key is the identifier for each service as used within the PHP SDK
-     * See https://github.com/serato/sws-php-sdk#configuring-the-sdk for more.
-     *
-     * @return array<String>
-     */
-    public function getSwsHosts(): array
-    {
-        $data = [];
-        foreach (self::SWS_HOSTS as $app => $id) {
-            $data[$id] = $this->get($app);
-        }
-        return $data;
-    }
 }
