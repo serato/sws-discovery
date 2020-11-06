@@ -30,19 +30,6 @@ class HostName
 
     private const ENVIRONMENT_NAMES = ['production', 'test', 'dev'];
 
-    # Defines a list of hosts that make up the SWS web services
-    # The value of each array item is the identifier for each service as passed to
-    # PHP SDK. It's VERY important that these values match.
-    # See https://github.com/serato/sws-php-sdk/blob/master/src/Sdk.php#L21
-    private const SWS_HOSTS = [
-        self::IDENTITY => 'id',
-        self::LICENSE => 'license',
-        self::ECOM => 'ecom',
-        self::NOTIFICATIONS => 'notifications',
-        self::DIGITAL_ASSETS => 'da',
-        self::PROFILE => 'profile'
-    ];
-
     private const TEST_STACK_NUM_PLACEHOLDER = '__TEST_STACK_NUM__';
 
     private const HOSTS = [
