@@ -31,3 +31,17 @@ $hostNames = new HostName('production', 1);
 # Use the `HostName::get` method to return the host name for a named application
 echo $hostNames->get(HostName::IDENTITY);
 ```
+
+### `HostName::getSwsHosts` method
+
+The `Serato\ServiceDiscovery\HostName::getSwsHosts` method provides a convenient way to fetch an array of host names for all
+SWS web services.
+
+The keys of the array are as follows:
+
+- 'profile'
+- 'da'
+- 'notifications'
+- 'id'
+- 'license'
+- 'ecom'

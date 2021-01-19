@@ -99,4 +99,10 @@ class HostNameTest extends TestCase
             ['test', 12, HostName::IDENTITY, 'https://test-12'],
         ];
     }
+
+    public function testGetSwsHosts(): void
+    {
+        $hosts = new HostName('production', 1);
+        $this->assertTrue(count($hosts->getSwsHosts()) > 0);
+    }
 }

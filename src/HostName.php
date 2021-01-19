@@ -138,42 +138,48 @@ class HostName
             'staging' => 'https://id.serato.xyz',
             'preprod' => 'https://id.serato.biz',
             'dev' => 'http://192.168.4.14:8585',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-id.serato.net'
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-id.serato.net',
+            'sws_host_key' => 'id'
         ],
         self::LICENSE => [
             'production' => 'https://license.serato.com',
             'staging' => 'https://license.serato.xyz',
             'preprod' => 'https://license.serato.biz',
             'dev' => 'http://192.168.4.14:8686',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-license.serato.net'
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-license.serato.net',
+            'sws_host_key' => 'license'
         ],
         self::ECOM => [
             'production' => 'https://ecom.serato.com',
             'staging' => 'https://ecom.serato.xyz',
             'preprod' => 'https://ecom.serato.biz',
             'dev' => 'http://192.168.4.14:8787',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-ecom.serato.net'
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-ecom.serato.net',
+            'sws_host_key' => 'ecom'
         ],
         self::NOTIFICATIONS => [
             'production' => 'https://notifications.serato.com',
             'staging' => 'https://notifications.serato.xyz',
             'preprod' => 'https://notifications.serato.biz',
             'dev' => 'http://192.168.4.14:8484',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-notifications.serato.net'
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-notifications.serato.net',
+            'sws_host_key' => 'notifications'
         ],
         self::DIGITAL_ASSETS => [
             'production' => 'https://da.serato.com',
             'staging' => 'https://da.serato.xyz',
             'preprod' => 'https://da.serato.biz',
             'dev' => 'http://192.168.4.14:8383',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-da.serato.net'
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-da.serato.net',
+            'sws_host_key' => 'da'
         ],
         self::PROFILE => [
             'production' => 'https://profile.serato.com',
             'staging' => 'https://profile.serato.xyz',
             'preprod' => 'https://profile.serato.biz',
             'dev' => 'http://192.168.4.14:8282',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-profile.serato.net'
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-profile.serato.net',
+            'sws_host_key' => 'profile'
         ]
     ];
 
@@ -224,5 +230,30 @@ class HostName
                 self::HOSTS[$app]['test']
             );
         }
+    }
+
+    /**
+     * Returns an array of host names for all SWS web services.
+     *
+     * The keys of the array are as follows:
+     *
+     * - 'profile'
+     * - 'da'
+     * - 'notifications'
+     * - 'id'
+     * - 'license'
+     * - 'ecom'
+     *
+     * @return array
+     */
+    public function getSwsHosts(): array
+    {
+        $data = [];
+        foreach (self::HOSTS as $host => $hostData) {
+            if (isset($hostData['sws_host_key'])) {
+                $data[$hostData['sws_host_key']] = $this->get($host);
+            }
+        }
+        return $data;
     }
 }
