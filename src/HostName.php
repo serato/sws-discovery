@@ -244,7 +244,7 @@ class HostName
      * - 'license'
      * - 'ecom'
      *
-     * @return array
+     * @return array<string, string>
      */
     public function getSwsHosts(): array
     {
