@@ -105,4 +105,10 @@ class HostNameTest extends TestCase
         $hosts = new HostName('production', 1);
         $this->assertTrue(count($hosts->getSwsHosts()) > 0);
     }
+
+    public function testGetAll(): void
+    {
+        $hosts = new HostName('production', 1);
+        $this->assertTrue(count($hosts->getAll()) > 0);
+    }
 }

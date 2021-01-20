@@ -30,6 +30,9 @@ $hostNames = new HostName('production', 1);
 
 # Use the `HostName::get` method to return the host name for a named application
 echo $hostNames->get(HostName::IDENTITY);
+
+# Use the `HostName::getAll` method to return an array of all hosts
+print_r($hostNames->getAll());
 ```
 
 ### `HostName::getSwsHosts` method

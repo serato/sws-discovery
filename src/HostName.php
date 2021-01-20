@@ -233,6 +233,20 @@ class HostName
     }
 
     /**
+     * Returns an array of all hosts
+     *
+     * @return array<string, string>
+     */
+    public function getAll(): array
+    {
+        $hosts = [];
+        foreach (self::HOSTS as $host => $hostData) {
+            $hosts[$host] = $this->get($host);
+        }
+        return $hosts;
+    }
+
+    /**
      * Returns an array of host names for all SWS web services.
      *
      * The keys of the array are as follows:
@@ -248,12 +262,16 @@ class HostName
      */
     public function getSwsHosts(): array
     {
-        $data = [];
+        # FWIW, the `sws_host_key` value is used because this method is primarily a convenience method
+        # for generating an array of URIs to feed into the SWS JS SDK.
+        # The SWS JS SDK expects certain keys in this array. The `sws_host_key` value is used for the key
+        # value. ie. It must be the value expected by the SWS JS SDK.
+        $hosts = [];
         foreach (self::HOSTS as $host => $hostData) {
             if (isset($hostData['sws_host_key'])) {
-                $data[$hostData['sws_host_key']] = $this->get($host);
+                $hosts[$hostData['sws_host_key']] = $this->get($host);
             }
         }
-        return $data;
+        return $hosts;
     }
 }
