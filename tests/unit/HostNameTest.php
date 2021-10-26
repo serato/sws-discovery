@@ -62,7 +62,8 @@ class HostNameTest extends TestCase
             ['production', 1, HostName::IDENTITY, 'https://'],
             ['production', 0, HostName::IDENTITY, '.com'],
             ['production', 0, HostName::IDENTITY, 'https://'],
-
+            ['production', 0, HostName::REWARDS, 'https://'],
+            ['production', 0, HostName::REWARDS, '.com'],
 
             ['test', 1, HostName::SERATO_COM, '.xyz'],
             ['test', 1, HostName::SERATO_COM, 'https://'],
@@ -70,6 +71,8 @@ class HostNameTest extends TestCase
             ['test', 1, HostName::CONSOLE, 'https://'],
             ['test', 1, HostName::IDENTITY, '.xyz'],
             ['test', 1, HostName::IDENTITY, 'https://'],
+            ['test', 1, HostName::REWARDS, '.xyz'],
+            ['test', 1, HostName::REWARDS, 'https://'],
 
             ['test', 0, HostName::SERATO_COM, '.biz'],
             ['test', 0, HostName::SERATO_COM, 'https://'],
@@ -84,6 +87,7 @@ class HostNameTest extends TestCase
             ['dev', 1, HostName::SERATO_COM, 'http://192.'],
             ['dev', 1, HostName::CONSOLE, 'http://192.'],
             ['dev', 1, HostName::IDENTITY, 'http://192.'],
+            ['dev', 1, HostName::REWARDS, 'http://192.'],
 
             ['test', 2, HostName::SERATO_COM, '.net'],
             ['test', 2, HostName::SERATO_COM, 'https://test-2'],
@@ -91,6 +95,8 @@ class HostNameTest extends TestCase
             ['test', 2, HostName::CONSOLE, 'https://test-2'],
             ['test', 2, HostName::IDENTITY, '.net'],
             ['test', 2, HostName::IDENTITY, 'https://test-2'],
+            ['test', 2, HostName::REWARDS, '.net'],
+            ['test', 2, HostName::REWARDS, 'https://test-2'],
 
             ['test', 12, HostName::SERATO_COM, '.net'],
             ['test', 12, HostName::SERATO_COM, 'https://test-12'],
@@ -98,6 +104,8 @@ class HostNameTest extends TestCase
             ['test', 12, HostName::CONSOLE, 'https://test-12'],
             ['test', 12, HostName::IDENTITY, '.net'],
             ['test', 12, HostName::IDENTITY, 'https://test-12'],
+            ['test', 12, HostName::REWARDS, '.net'],
+            ['test', 12, HostName::REWARDS, 'https://test-12']
         ];
     }
 

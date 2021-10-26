@@ -29,7 +29,7 @@ class HostName
     public const NOTIFICATIONS = 'notifications';
     public const DIGITAL_ASSETS = 'da';
     public const PROFILE = 'profile';
-    public const PERKS = 'perks';
+    public const REWARDS = 'rewards';
 
     private const ENVIRONMENT_NAMES = ['production', 'test', 'dev'];
 
@@ -184,14 +184,14 @@ class HostName
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-profile.serato.net',
             'sws_host_key' => 'profile'
         ],
-        self::PERKS => [
-            'production' => 'https://perks.serato.com',
-            'staging' => 'https://perks.serato.xyz',
-            'preprod' => 'https://perks.serato.biz',
-            'dev' => 'http://192.168.4.14:8788/',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-perks.serato.net',
-            'sws_host_key' => 'perks'
-        ],
+        self::REWARDS => [
+            'production' => 'https://rewards.serato.com',
+            'staging' => 'https://rewards.serato.xyz',
+            'preprod' => 'https://rewards.serato.biz',
+            'dev' => 'http://192.168.4.14:8788',
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-rewards.serato.net',
+            'sws_host_key' => 'rewards'
+        ]
     ];
 
     /** @var string */
@@ -268,6 +268,7 @@ class HostName
      * - 'id'
      * - 'license'
      * - 'ecom'
+     * - 'rewards'
      *
      * @return array<string, string>
      */
