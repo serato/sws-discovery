@@ -48,3 +48,4 @@ The keys of the array are as follows:
 - 'id'
 - 'license'
 - 'ecom'
+- 'rewards'
