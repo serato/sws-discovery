@@ -187,7 +187,7 @@ class HostName
             'staging' => 'https://rewards.serato.xyz',
             'preprod' => 'https://rewards.serato.biz',
             'dev' => 'http://192.168.4.14:8788',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-profile.serato.net',
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-rewards.serato.net',
             'sws_host_key' => 'rewards'
         ]
     ];
