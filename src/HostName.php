@@ -22,6 +22,8 @@ class HostName
     public const MY_SERATO = 'my_serato';
     public const SDJ_SIMULATOR = 'sdj_simulator';
     public const CONSOLE = 'console';
+    public const STUDIO_WEB_APP = 'studio_web_app';
+    public const VISUALIZER = 'visualizer';
 
     public const IDENTITY = 'identity';
     public const LICENSE = 'license';
@@ -133,6 +135,22 @@ class HostName
             'preprod' => 'https://account.serato.biz',
             'dev' => 'http://192.168.4.10',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
+        ],
+
+        # Frontend apps served from CDN distributions wth unique domain names
+        self::STUDIO_WEB_APP => [
+            'production' => 'https://studio.serato.com',
+            'staging' => 'https://studio.serato.net',
+            'preprod' => 'https://studio.serato.net',
+            'dev' => 'http://localhost:8080',
+            'test' => 'https://studio.serato.net'
+        ],
+        self::VISUALIZER => [
+            'production' => 'https://visualizer.serato.net', # FIXME when app goes live
+            'staging' => 'https://visualizer.serato.net',
+            'preprod' => 'https://visualizer.serato.net',
+            'dev' => 'http://localhost:8080',
+            'test' => 'https://visualizer.serato.net'
         ],
 
         # SWS Web Services
