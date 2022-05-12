@@ -49,6 +49,8 @@ The keys of the array are as follows:
 - 'license'
 - 'ecom'
 - 'rewards'
+- 'video'
+
 ## Using Docker to develop this library.
 
 Use the provided [docker-compose.yml](./docker-compose.yml) file to develop this library.
