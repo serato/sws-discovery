@@ -32,6 +32,7 @@ class HostName
     public const DIGITAL_ASSETS = 'da';
     public const PROFILE = 'profile';
     public const REWARDS = 'rewards';
+    public const VIDEO = 'video';
 
     private const ENVIRONMENT_NAMES = ['production', 'test', 'dev'];
 
@@ -43,6 +44,7 @@ class HostName
             'staging' => 'https://serato.xyz',
             'preprod' => 'https://serato.biz',
             'dev' => 'http://192.168.4.2:8080',
+            'dev2' => 'http://localhost:8500',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '.serato.net'
         ],
         self::MANAGE_SERATO_COM => [
@@ -50,6 +52,7 @@ class HostName
             'staging' => 'https://manage.serato.xyz',
             'preprod' => 'https://manage.serato.biz',
             'dev' => 'http://192.168.4.2:8083',
+            'dev2' => 'http://localhost:8501',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-manage.serato.net'
         ],
         self::AUTH_SERATO_COM => [
@@ -57,6 +60,7 @@ class HostName
             'staging' => 'https://auth.serato.xyz',
             'preprod' => 'https://auth.serato.biz',
             'dev' => 'http://192.168.4.2:8081',
+            'dev2' => 'http://localhost:8502',
             'test' => 'http://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-my.serato.net'
         ],
         self::STORE_SERATO_COM => [
@@ -72,6 +76,7 @@ class HostName
             # No DNS entry for this (ie. doesn't exist in pre-prod):
             'preprod' => 'https://api.serato.biz',
             'dev' => 'http://192.168.5.2',
+            'dev2' => 'http://localhost:8506',
             # No test stacks exist and no DNS entries. So this is made up :-)
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-api.serato.net'
         ],
@@ -80,6 +85,7 @@ class HostName
             'staging' => 'https://playlists.serato.xyz',
             'preprod' => 'https://playlists.serato.biz',
             'dev' => 'http://192.168.4.2:8085',
+            'dev2' => 'http://localhost:8503',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-playlists.serato.net'
         ],
         self::OLD_SCRATCHLIVE_NET => [
@@ -87,6 +93,7 @@ class HostName
             'staging' => 'https://translation.serato.xyz',
             'preprod' => 'https://translation.serato.biz',
             'dev' => 'http://192.168.4.2:8086',
+            'dev2' => 'http://localhost:8504',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-translation.serato.net'
         ],
         self::SERA_TO => [
@@ -94,6 +101,7 @@ class HostName
             'staging' => 'https://redirects.serato.xyz',
             'preprod' => 'http://redirects.serato.biz',
             'dev' => 'http://192.168.4.2:8084',
+            'dev2' => 'http://localhost:8505',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-redirects.serato.net'
         ],
         self::IN_SERA_TO_API => [
@@ -102,6 +110,7 @@ class HostName
             # No DNS entry for this (ie. doesn't exist in pre-prod):
             'preprod' => 'https://in-api.serato.xyz',
             'dev' => 'http://192.168.0.2',
+            'dev2' => 'http://localhost:8507',
             # No test stacks exist and no DNS entries. So this is made up :-)
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-in-api.serato.net'
         ],
@@ -159,6 +168,7 @@ class HostName
             'staging' => 'https://id.serato.xyz',
             'preprod' => 'https://id.serato.biz',
             'dev' => 'http://192.168.4.14:8585',
+            'dev2' => 'http://localhost:8300',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-id.serato.net',
             'sws_host_key' => 'id'
         ],
@@ -167,6 +177,7 @@ class HostName
             'staging' => 'https://license.serato.xyz',
             'preprod' => 'https://license.serato.biz',
             'dev' => 'http://192.168.4.14:8686',
+            'dev2' => 'http://localhost:8301',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-license.serato.net',
             'sws_host_key' => 'license'
         ],
@@ -175,6 +186,7 @@ class HostName
             'staging' => 'https://ecom.serato.xyz',
             'preprod' => 'https://ecom.serato.biz',
             'dev' => 'http://192.168.4.14:8787',
+            'dev2' => 'http://localhost:8302',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-ecom.serato.net',
             'sws_host_key' => 'ecom'
         ],
@@ -183,6 +195,7 @@ class HostName
             'staging' => 'https://notifications.serato.xyz',
             'preprod' => 'https://notifications.serato.biz',
             'dev' => 'http://192.168.4.14:8484',
+            'dev2' => 'http://localhost:8303',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-notifications.serato.net',
             'sws_host_key' => 'notifications'
         ],
@@ -191,6 +204,7 @@ class HostName
             'staging' => 'https://da.serato.xyz',
             'preprod' => 'https://da.serato.biz',
             'dev' => 'http://192.168.4.14:8383',
+            'dev2' => 'http://localhost:8304',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-da.serato.net',
             'sws_host_key' => 'da'
         ],
@@ -199,6 +213,7 @@ class HostName
             'staging' => 'https://profile.serato.xyz',
             'preprod' => 'https://profile.serato.biz',
             'dev' => 'http://192.168.4.14:8282',
+            'dev2' => 'http://localhost:8305',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-profile.serato.net',
             'sws_host_key' => 'profile'
         ],
@@ -207,8 +222,18 @@ class HostName
             'staging' => 'https://rewards.serato.xyz',
             'preprod' => 'https://rewards.serato.biz',
             'dev' => 'http://192.168.4.14:8788',
+            'dev2' => 'http://localhost:8306',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-rewards.serato.net',
             'sws_host_key' => 'rewards'
+        ],
+        self::VIDEO => [
+            'production' => 'https://video.serato.com',
+            'staging' => 'https://video.serato.xyz',
+            'preprod' => 'https://video.serato.biz',
+            'dev' => 'http://192.168.4.14:8789',
+            'dev2' => 'http://localhost:8307',
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-video.serato.net',
+            'sws_host_key' => 'video'
         ]
     ];
 
@@ -242,9 +267,17 @@ class HostName
     {
         if (!isset(self::HOSTS[$app])) {
             throw new Exception('Invalid application name `' . $app . '`');
-        } elseif ($this->environmentName === 'production' || $this->environmentName === 'dev') {
-            # 'production' and 'dev'
+        } elseif ($this->environmentName === 'production') {
+            # 'production'
             return self::HOSTS[$app][$this->environmentName];
+        } elseif ($this->environmentName === 'dev') {
+            if ($this->environmentNumber === 2 && isset(self::HOSTS[$app]['dev2'])) {
+                # 'dev 2'
+                return self::HOSTS[$app]['dev2'];
+            } else {
+                # 'dev'
+                return self::HOSTS[$app][$this->environmentName];
+            }
         } elseif ($this->environmentNumber === 0) {
             # pre-prod
             return self::HOSTS[$app]['preprod'];
