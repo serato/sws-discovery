@@ -139,11 +139,11 @@ class HostName
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
         ],
         self::CONSOLE => [
-            'production' => 'https://account.serato.com',
-            'staging' => 'https://account.serato.xyz',
-            'preprod' => 'https://account.serato.biz',
+            'production' => 'https://console.serato.com',
+            'staging' => 'https://console.serato.net',
+            'preprod' => 'https://console.serato.net',
             'dev' => 'http://192.168.4.10',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
+            'test' => 'https://console.serato.net'
         ],
 
         # Frontend apps served from CDN distributions wth unique domain names
@@ -155,7 +155,7 @@ class HostName
             'test' => 'https://studio.serato.net'
         ],
         self::VISUALIZER => [
-            'production' => 'https://visualizer.serato.net', # FIXME when app goes live
+            'production' => 'https://visualizer.serato.com',
             'staging' => 'https://visualizer.serato.net',
             'preprod' => 'https://visualizer.serato.net',
             'dev' => 'http://localhost:8080',
