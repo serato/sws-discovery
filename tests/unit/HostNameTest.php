@@ -70,14 +70,14 @@ class HostNameTest extends TestCase
             ['production', 1, HostName::STUDIO_WEB_APP, 'https://'],
             ['production', 0, HostName::STUDIO_WEB_APP, '.com'],
             ['production', 0, HostName::STUDIO_WEB_APP, 'https://'],
-            ['production', 1, HostName::VISUALIZER, '.net'], # FIXME when app goes live
+            ['production', 1, HostName::VISUALIZER, '.com'],
             ['production', 1, HostName::VISUALIZER, 'https://'],
-            ['production', 0, HostName::VISUALIZER, '.net'], # FIXME when app goes live
+            ['production', 0, HostName::VISUALIZER, '.com'],
             ['production', 0, HostName::VISUALIZER, 'https://'],
 
             ['test', 1, HostName::SERATO_COM, '.xyz'],
             ['test', 1, HostName::SERATO_COM, 'https://'],
-            ['test', 1, HostName::CONSOLE, '.xyz'],
+            ['test', 1, HostName::CONSOLE, '.net'],
             ['test', 1, HostName::CONSOLE, 'https://'],
             ['test', 1, HostName::IDENTITY, '.xyz'],
             ['test', 1, HostName::IDENTITY, 'https://'],
@@ -92,7 +92,7 @@ class HostNameTest extends TestCase
 
             ['test', 0, HostName::SERATO_COM, '.biz'],
             ['test', 0, HostName::SERATO_COM, 'https://'],
-            ['test', 0, HostName::CONSOLE, '.biz'],
+            ['test', 0, HostName::CONSOLE, '.net'],
             ['test', 0, HostName::CONSOLE, 'https://'],
             ['test', 0, HostName::IDENTITY, '.biz'],
             ['test', 0, HostName::IDENTITY, 'https://'],
@@ -130,7 +130,6 @@ class HostNameTest extends TestCase
             ['test', 2, HostName::SERATO_COM, '.net'],
             ['test', 2, HostName::SERATO_COM, 'https://test-2'],
             ['test', 2, HostName::CONSOLE, '.net'],
-            ['test', 2, HostName::CONSOLE, 'https://test-2'],
             ['test', 2, HostName::IDENTITY, '.net'],
             ['test', 2, HostName::IDENTITY, 'https://test-2'],
             ['test', 2, HostName::REWARDS, '.net'],
@@ -145,7 +144,6 @@ class HostNameTest extends TestCase
             ['test', 12, HostName::SERATO_COM, '.net'],
             ['test', 12, HostName::SERATO_COM, 'https://test-12'],
             ['test', 12, HostName::CONSOLE, '.net'],
-            ['test', 12, HostName::CONSOLE, 'https://test-12'],
             ['test', 12, HostName::IDENTITY, '.net'],
             ['test', 12, HostName::IDENTITY, 'https://test-12'],
             ['test', 12, HostName::REWARDS, '.net'],
