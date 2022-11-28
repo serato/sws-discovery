@@ -124,19 +124,27 @@ class HostName
             'dev' => 'http://192.168.4.10',
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
         ],
+        /**
+         * My Serato 2.0 has 3 environments - prod, test (staging) and dev (localhost)
+         * Test stacks are mapped to the staging environment (xyz)
+         */
         self::MY_SERATO => [
-            'production' => 'https://account.serato.com',
-            'staging' => 'https://account.serato.xyz',
-            'preprod' => 'https://account.serato.biz',
-            'dev' => 'http://192.168.4.10',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
+            'production' => 'https://myserato.serato.com',
+            'staging' => 'https://myserato.serato.xyz',
+            'preprod' => 'https://myserato.serato.xyz',
+            'dev' => 'http://localhost:8083',
+            'test' => 'https://myserato.serato.xyz'
         ],
+        /**
+         * SDJ sim app has 3 environments - prod, test (staging) and dev (localhost)
+         * Test stacks are mapped to the staging environment (xyz)
+         */
         self::SDJ_SIMULATOR => [
-            'production' => 'https://account.serato.com',
-            'staging' => 'https://account.serato.xyz',
-            'preprod' => 'https://account.serato.biz',
-            'dev' => 'http://192.168.4.10',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
+            'production' => 'https://sdjsim.serato.com',
+            'staging' => 'https://sdjsim.serato.xyz',
+            'preprod' => 'https://sdjsim.serato.xyz',
+            'dev' => 'http://localhost:8082',
+            'test' => 'https://sdjsim.serato.xyz'
         ],
         self::CONSOLE => [
             'production' => 'https://console.serato.com',
