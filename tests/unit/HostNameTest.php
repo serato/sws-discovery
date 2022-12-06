@@ -27,7 +27,7 @@ class HostNameTest extends TestCase
     }
 
     /**
-     * Smoke test the HostName::get method
+     * Smoke test the HostName::get method with the `backend` variant
      *
      * @param string $envName
      * @param integer $envNumber
@@ -37,11 +37,39 @@ class HostNameTest extends TestCase
      *
      * @dataProvider smokeTestProvider
      */
-    public function testGetSmokeTest(string $envName, int $envNumber, string $appName, string $match): void
-    {
+    public function testGetSmokeTestBackend(
+        string $envName,
+        int $envNumber,
+        string $appName,
+        string $backendMatch,
+        string $frontendMatch = null
+    ): void {
         $hosts = new HostName($envName, $envNumber);
-        $hostName = $hosts->get($appName);
-        $this->assertTrue(strpos($hostName, $match) !== false);
+        $hostName = $hosts->get($appName, HostName::BACKEND);
+        $this->assertTrue(strpos($hostName, $backendMatch) !== false);
+    }
+
+    /**
+     * Smoke test the HostName::get method with the `frontend` variant
+     *
+     * @param string $envName
+     * @param integer $envNumber
+     * @param string $appName
+     * @param string $match
+     * @return void
+     *
+     * @dataProvider smokeTestProvider
+     */
+    public function testGetSmokeTestFrontend(
+        string $envName,
+        int $envNumber,
+        string $appName,
+        string $backendMatch,
+        string $frontendMatch = null
+    ): void {
+        $hosts = new HostName($envName, $envNumber);
+        $hostName = $hosts->get($appName, HostName::FRONTEND);
+        $this->assertTrue(strpos($hostName, $frontendMatch ?? $backendMatch) !== false);
     }
 
     /**
@@ -129,11 +157,20 @@ class HostNameTest extends TestCase
             ['dev', 1, HostName::SDJ_SIMULATOR, 'http://'],
             ['dev', 1, HostName::SDJ_SIMULATOR, 'localhost:8082'],
 
-            ['dev', 2, HostName::SERATO_COM, 'localhost'],
+            ['dev', 2, HostName::SERATO_COM, 'serato-websites', 'localhost:8500'],
+            ['dev', 2, HostName::MANAGE_SERATO_COM, 'serato-websites', 'localhost:8501'],
+            ['dev', 2, HostName::AUTH_SERATO_COM, 'serato-websites', 'localhost:8502'],
+            ['dev', 2, HostName::PLAYLISTS, 'serato-websites', 'localhost:8503'],
+            ['dev', 2, HostName::SERA_TO, 'serato-websites', 'localhost:8505'],
             ['dev', 2, HostName::CONSOLE, 'http://192.'],
-            ['dev', 2, HostName::IDENTITY, 'localhost'],
-            ['dev', 2, HostName::REWARDS, 'localhost'],
-            ['dev', 2, HostName::VIDEO, 'localhost'],
+            ['dev', 2, HostName::IDENTITY, 'sws-identity', 'localhost:8300'],
+            ['dev', 2, HostName::LICENSE, 'sws-license', 'localhost:8301'],
+            ['dev', 2, HostName::ECOM, 'sws-ecom', 'localhost:8302'],
+            ['dev', 2, HostName::NOTIFICATIONS, 'sws-notifications', 'localhost:8303'],
+            ['dev', 2, HostName::DIGITAL_ASSETS, 'sws-da', 'localhost:8304'],
+            ['dev', 2, HostName::PROFILE, 'sws-profile', 'localhost:8305'],
+            ['dev', 2, HostName::REWARDS, 'sws-rewards', 'localhost:8306'],
+            ['dev', 2, HostName::VIDEO, 'sws-video', 'localhost:8307'],
             ['dev', 2, HostName::STUDIO_WEB_APP, 'http://'],
             ['dev', 2, HostName::STUDIO_WEB_APP, 'localhost'],
             ['dev', 2, HostName::VISUALIZER, 'http://'],
