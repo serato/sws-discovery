@@ -48,8 +48,10 @@ class HostName
             'preprod' => 'https://serato.biz',
             'dev' => 'http://192.168.4.2:8080',
             'dev2' => [
-                self::BACKEND => 'http://serato-websites:8500', // DNS name (and port) for internal Docker `frontend` network
-                self::FRONTEND => 'http://localhost:8500' // DNS name (and port) for "external" access
+                // DNS name (and port) for internal Docker `frontend` network
+                self::BACKEND => 'http://serato-websites:8500',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8500'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '.serato.net'
         ],
@@ -59,8 +61,10 @@ class HostName
             'preprod' => 'https://manage.serato.biz',
             'dev' => 'http://192.168.4.2:8083',
             'dev2' => [
-                self::BACKEND => 'http://serato-websites:8501', // DNS name (and port) for internal Docker `frontend` network
-                self::FRONTEND => 'http://localhost:8501' // DNS name (and port) for "external" access
+                // DNS name (and port) for internal Docker `frontend` network
+                self::BACKEND => 'http://serato-websites:8501',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8501'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-manage.serato.net'
         ],
@@ -70,8 +74,10 @@ class HostName
             'preprod' => 'https://auth.serato.biz',
             'dev' => 'http://192.168.4.2:8081',
             'dev2' => [
-                self::BACKEND => 'http://serato-websites:8502', // DNS name (and port) for internal Docker `frontend` network
-                self::FRONTEND => 'http://localhost:8502' // DNS name (and port) for "external" access
+                // DNS name (and port) for internal Docker `frontend` network
+                self::BACKEND => 'http://serato-websites:8502',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8502'
             ],
             'test' => 'http://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-my.serato.net'
         ],
@@ -97,8 +103,10 @@ class HostName
             'preprod' => 'https://playlists.serato.biz',
             'dev' => 'http://192.168.4.2:8085',
             'dev2' => [
-                self::BACKEND => 'http://serato-websites:8503', // DNS name (and port) for internal Docker `frontend` network
-                self::FRONTEND => 'http://localhost:8503' // DNS name (and port) for "external" access
+                // DNS name (and port) for internal Docker `frontend` network
+                self::BACKEND => 'http://serato-websites:8503',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8503'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-playlists.serato.net'
         ],
@@ -108,8 +116,10 @@ class HostName
             'preprod' => 'https://translation.serato.biz',
             'dev' => 'http://192.168.4.2:8086',
             'dev2' => [
-                self::BACKEND => 'http://serato-websites:8504', // DNS name (and port) for internal Docker `frontend` network
-                self::FRONTEND => 'http://localhost:8504' // DNS name (and port) for "external" access
+                // DNS name (and port) for internal Docker `frontend` network
+                self::BACKEND => 'http://serato-websites:8504',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8504'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-translation.serato.net'
         ],
@@ -119,8 +129,10 @@ class HostName
             'preprod' => 'http://redirects.serato.biz',
             'dev' => 'http://192.168.4.2:8084',
             'dev2' => [
-                self::BACKEND => 'http://serato-websites:8505', // DNS name (and port) for internal Docker `frontend` network
-                self::FRONTEND => 'http://localhost:8505' // DNS name (and port) for "external" access
+                // DNS name (and port) for internal Docker `frontend` network
+                self::BACKEND => 'http://serato-websites:8505',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8505'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-redirects.serato.net'
         ],
@@ -196,8 +208,10 @@ class HostName
             'preprod' => 'https://id.serato.biz',
             'dev' => 'http://192.168.4.14:8585',
             'dev2' => [
-                self::BACKEND => 'http://sws-identity', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8300' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-identity',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8300'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-id.serato.net',
             'sws_host_key' => 'id'
@@ -208,8 +222,10 @@ class HostName
             'preprod' => 'https://license.serato.biz',
             'dev' => 'http://192.168.4.14:8686',
             'dev2' => [
-                self::BACKEND => 'http://sws-license', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8301' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-license',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8301'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-license.serato.net',
             'sws_host_key' => 'license'
@@ -220,8 +236,10 @@ class HostName
             'preprod' => 'https://ecom.serato.biz',
             'dev' => 'http://192.168.4.14:8787',
             'dev2' => [
-                self::BACKEND => 'http://sws-ecom', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8302' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-ecom',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8302'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-ecom.serato.net',
             'sws_host_key' => 'ecom'
@@ -232,8 +250,10 @@ class HostName
             'preprod' => 'https://notifications.serato.biz',
             'dev' => 'http://192.168.4.14:8484',
             'dev2' => [
-                self::BACKEND => 'http://sws-notifications', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8303' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-notifications',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8303'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-notifications.serato.net',
             'sws_host_key' => 'notifications'
@@ -244,8 +264,10 @@ class HostName
             'preprod' => 'https://da.serato.biz',
             'dev' => 'http://192.168.4.14:8383',
             'dev2' => [
-                self::BACKEND => 'http://sws-da', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8304' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-da',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8304'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-da.serato.net',
             'sws_host_key' => 'da'
@@ -256,8 +278,10 @@ class HostName
             'preprod' => 'https://profile.serato.biz',
             'dev' => 'http://192.168.4.14:8282',
             'dev2' => [
-                self::BACKEND => 'http://sws-profile', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8305' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-profile',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8305'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-profile.serato.net',
             'sws_host_key' => 'profile'
@@ -268,8 +292,10 @@ class HostName
             'preprod' => 'https://rewards.serato.biz',
             'dev' => 'http://192.168.4.14:8788',
             'dev2' => [
-                self::BACKEND => 'http://sws-rewards', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8306' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-rewards',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8306'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-rewards.serato.net',
             'sws_host_key' => 'rewards'
@@ -280,8 +306,10 @@ class HostName
             'preprod' => 'https://video.serato.biz',
             'dev' => 'http://192.168.4.14:8789',
             'dev2' => [
-                self::BACKEND => 'http://sws-video', // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::FRONTEND => 'http://localhost:8307' // DNS name (and port) for "external" access
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-video',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8307'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-video.serato.net',
             'sws_host_key' => 'video'
@@ -404,12 +432,19 @@ class HostName
         return $hosts;
     }
 
-    private function getVariant ($val, $variant) {
+    /**
+     * @param mixed $val
+     * @param string $variant
+     * @return string
+     */
+    private function getVariant($val, string $variant): string
+    {
         if (is_string($val)) {
             return $val;
         }
         if (is_array($val)) {
             return $val[$variant];
         }
+        return '';
     }
 }

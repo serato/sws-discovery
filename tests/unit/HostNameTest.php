@@ -32,7 +32,8 @@ class HostNameTest extends TestCase
      * @param string $envName
      * @param integer $envNumber
      * @param string $appName
-     * @param string $match
+     * @param string $backendMatch
+     * @param string $frontendMatch
      * @return void
      *
      * @dataProvider smokeTestProvider
@@ -55,7 +56,8 @@ class HostNameTest extends TestCase
      * @param string $envName
      * @param integer $envNumber
      * @param string $appName
-     * @param string $match
+     * @param string $backendMatch
+     * @param string $frontendMatch
      * @return void
      *
      * @dataProvider smokeTestProvider
