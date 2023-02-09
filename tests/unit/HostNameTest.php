@@ -6,22 +6,19 @@ namespace Serato\ServiceDiscovery\Test;
 
 use PHPUnit\Framework\TestCase;
 use Serato\ServiceDiscovery\HostName;
+use Exception;
 
 class HostNameTest extends TestCase
 {
-    /**
-     * @expectedException \Exception
-     */
     public function testInvalidEnvName(): void
     {
+        $this->expectException(Exception::class);
         new HostName('wrong', 1);
     }
 
-    /**
-     * @expectedException \Exception
-     */
     public function testAppName(): void
     {
+        $this->expectException(Exception::class);
         $hosts = new HostName('dev', 1);
         $hosts->get('wrong');
     }
@@ -96,6 +93,7 @@ class HostNameTest extends TestCase
             ['production', 0, HostName::REWARDS, '.com'],
             ['production', 0, HostName::VIDEO, 'https://'],
             ['production', 0, HostName::VIDEO, '.com'],
+            ['production', 0, HostName::AI_PROXY, '.com'],
             ['production', 1, HostName::STUDIO_WEB_APP, '.com'],
             ['production', 1, HostName::STUDIO_WEB_APP, 'https://'],
             ['production', 0, HostName::STUDIO_WEB_APP, '.com'],
@@ -119,6 +117,7 @@ class HostNameTest extends TestCase
             ['test', 1, HostName::REWARDS, 'https://'],
             ['test', 1, HostName::VIDEO, '.xyz'],
             ['test', 1, HostName::VIDEO, 'https://'],
+            ['test', 1, HostName::AI_PROXY, 'https://'],
             ['test', 1, HostName::STUDIO_WEB_APP, '.net'],
             ['test', 1, HostName::STUDIO_WEB_APP, 'https://'],
             ['test', 1, HostName::VISUALIZER, '.net'],
@@ -134,6 +133,8 @@ class HostNameTest extends TestCase
             ['test', 0, HostName::IDENTITY, 'https://'],
             ['test', 0, HostName::VIDEO, '.biz'],
             ['test', 0, HostName::VIDEO, 'https://'],
+            ['test', 0, HostName::AI_PROXY, '.biz'],
+            ['test', 0, HostName::AI_PROXY, 'https://'],
             ['test', 0, HostName::STUDIO_WEB_APP, '.net'],
             ['test', 0, HostName::STUDIO_WEB_APP, 'https://'],
             ['test', 0, HostName::VISUALIZER, '.net'],
@@ -150,6 +151,7 @@ class HostNameTest extends TestCase
             ['dev', 1, HostName::IDENTITY, 'http://192.'],
             ['dev', 1, HostName::REWARDS, 'http://192.'],
             ['dev', 1, HostName::VIDEO, 'http://192.'],
+            ['dev', 1, HostName::AI_PROXY, 'http://192.'],
             ['dev', 1, HostName::STUDIO_WEB_APP, 'http://'],
             ['dev', 1, HostName::STUDIO_WEB_APP, 'localhost'],
             ['dev', 1, HostName::VISUALIZER, 'http://'],
@@ -172,7 +174,7 @@ class HostNameTest extends TestCase
             ['dev', 2, HostName::DIGITAL_ASSETS, 'sws-da', 'localhost:8304'],
             ['dev', 2, HostName::PROFILE, 'sws-profile', 'localhost:8305'],
             ['dev', 2, HostName::REWARDS, 'sws-rewards', 'localhost:8306'],
-            ['dev', 2, HostName::VIDEO, 'sws-video', 'localhost:8307'],
+            ['dev', 2, HostName::AI_PROXY, 'sws-ai-proxy', 'localhost:8308'],
             ['dev', 2, HostName::STUDIO_WEB_APP, 'http://'],
             ['dev', 2, HostName::STUDIO_WEB_APP, 'localhost'],
             ['dev', 2, HostName::VISUALIZER, 'http://'],
@@ -189,8 +191,8 @@ class HostNameTest extends TestCase
             ['test', 2, HostName::IDENTITY, 'https://test-2'],
             ['test', 2, HostName::REWARDS, '.net'],
             ['test', 2, HostName::REWARDS, 'https://test-2'],
-            ['test', 2, HostName::VIDEO, '.net'],
-            ['test', 2, HostName::VIDEO, 'https://test-2'],
+            ['test', 2, HostName::AI_PROXY, '.net'],
+            ['test', 2, HostName::AI_PROXY, 'https://test-2'],
             ['test', 2, HostName::STUDIO_WEB_APP, '.net'],
             ['test', 2, HostName::STUDIO_WEB_APP, 'https://'],
             ['test', 2, HostName::VISUALIZER, '.net'],
@@ -205,8 +207,8 @@ class HostNameTest extends TestCase
             ['test', 12, HostName::IDENTITY, 'https://test-12'],
             ['test', 12, HostName::REWARDS, '.net'],
             ['test', 12, HostName::REWARDS, 'https://test-12'],
-            ['test', 12, HostName::VIDEO, '.net'],
-            ['test', 12, HostName::VIDEO, 'https://test-12'],
+            ['test', 12, HostName::AI_PROXY, '.net'],
+            ['test', 12, HostName::AI_PROXY, 'https://test-12'],
             ['test', 12, HostName::STUDIO_WEB_APP, '.net'],
             ['test', 12, HostName::STUDIO_WEB_APP, 'https://'],
             ['test', 12, HostName::VISUALIZER, '.net'],

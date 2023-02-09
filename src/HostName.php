@@ -33,6 +33,7 @@ class HostName
     public const PROFILE = 'profile';
     public const REWARDS = 'rewards';
     public const VIDEO = 'video';
+    public const AI_PROXY = 'ai-proxy';
 
     public const FRONTEND = 'frontend';
     public const BACKEND = 'backend';
@@ -313,6 +314,20 @@ class HostName
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-video.serato.net',
             'sws_host_key' => 'video'
+        ],
+        self::AI_PROXY => [
+            'production' => 'https://ai-proxy.serato.com',
+            'staging' => 'https://ai-proxy.serato.xyz',
+            'preprod' => 'https://ai-proxy.serato.biz',
+            'dev' => 'http://192.168.4.14:8789',
+            'dev2' => [
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-ai-proxy',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8308'
+            ],
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-ai-proxy.serato.net',
+            'sws_host_key' => 'ai-proxy'
         ]
     ];
 
