@@ -319,7 +319,7 @@ class HostName
             'production' => 'https://ai-proxy.serato.com',
             'staging' => 'https://ai-proxy.serato.xyz',
             'preprod' => 'https://ai-proxy.serato.biz',
-            'dev' => 'http://192.168.4.14:8789',
+            'dev' => 'http://192.168.4.14:8790',
             'dev2' => [
                 // DNS name for internal Docker `frontend` network (HTTP available on port 80)
                 self::BACKEND => 'http://sws-ai-proxy',
