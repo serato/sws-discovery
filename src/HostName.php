@@ -150,11 +150,12 @@ class HostName
         # Frontend apps service from the "apps.serato.com" web application
         # These currently all use the same domain name.
         self::MY_ACCOUNT => [
-            'production' => 'https://account.serato.com',
-            'staging' => 'https://account.serato.xyz',
-            'preprod' => 'https://account.serato.biz',
+            'production' => 'https://my.serato.com',
+            'staging' => 'https://my.serato.xyz',
+            'preprod' => 'https://my.serato.biz',
+            'test' => 'https://my.serato.net',
             'dev' => 'http://192.168.4.10',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
+            'dev2' => 'http://localhost:8095',
         ],
         /**
          * My Serato 2.0 has 3 environments - prod, test (staging) and dev (localhost)
