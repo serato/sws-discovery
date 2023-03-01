@@ -153,7 +153,7 @@ class HostName
             'production' => 'https://my.serato.com',
             'staging' => 'https://my.serato.xyz',
             'preprod' => 'https://my.serato.biz',
-            'test' => 'https://my.serato.net',
+            'test' => 'https://my.serato.xyz',
             'dev' => 'http://192.168.4.10',
             'dev2' => 'http://localhost:8095',
         ],
