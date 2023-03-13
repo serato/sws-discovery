@@ -19,7 +19,6 @@ class HostName
     public const IN_SERA_TO_API = 'in_sera_to_api';
 
     public const MY_ACCOUNT = 'my_account';
-    public const MY_ACCOUNT_OLD = 'my_account_old';
     public const MY_SERATO = 'my_serato';
     public const SDJ_SIMULATOR = 'sdj_simulator';
     public const CONSOLE = 'console';
@@ -146,22 +145,6 @@ class HostName
             'dev' => 'http://192.168.0.2',
             # No test stacks exist and no DNS entries. So this is made up :-)
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-in-api.serato.net'
-        ],
-
-        # Legacy service that used to host our frontend apps
-        # It is a stub which has no functionality besides the redirects
-        self::MY_ACCOUNT_OLD => [
-            'production' => 'https://account.serato.com',
-            'staging' => 'https://account.serato.xyz',
-            'preprod' => 'https://account.serato.biz',
-            'dev' => 'http://192.168.4.10',
-            'dev2' => [
-                // DNS name (and port) for internal Docker `frontend` network
-                self::BACKEND => 'http://old-account:8510/account',
-                // DNS name (and port) for "external" access
-                self::FRONTEND => 'http://localhost:8510/account'
-            ],
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
         ],
 
         self::MY_ACCOUNT => [
