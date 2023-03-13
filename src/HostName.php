@@ -157,9 +157,9 @@ class HostName
             'dev' => 'http://192.168.4.10',
             'dev2' => [
                 // DNS name (and port) for internal Docker `frontend` network
-                self::BACKEND => 'http://old-account:8309',
+                self::BACKEND => 'http://old-account:8510/account',
                 // DNS name (and port) for "external" access
-                self::FRONTEND => 'http://localhost:8309'
+                self::FRONTEND => 'http://localhost:8510/account'
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
         ],
@@ -202,6 +202,7 @@ class HostName
             'test' => 'https://console.serato.net'
         ],
 
+        # Frontend apps served from CDN distributions wth unique domain names
         # Frontend apps served from CDN distributions wth unique domain names
         self::STUDIO_WEB_APP => [
             'production' => 'https://studio.serato.com',
