@@ -149,7 +149,7 @@ class HostName
         ],
 
         # Legacy service that used to host our frontend apps
-        # It is a stub which has not functionality besides the redirects
+        # It is a stub which has no functionality besides the redirects
         self::MY_ACCOUNT_OLD => [
             'production' => 'https://account.serato.com',
             'staging' => 'https://account.serato.xyz',
