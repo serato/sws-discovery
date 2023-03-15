@@ -147,15 +147,14 @@ class HostName
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-in-api.serato.net'
         ],
 
-        # Frontend apps service from the "apps.serato.com" web application
-        # These currently all use the same domain name.
         self::MY_ACCOUNT => [
-            'production' => 'https://account.serato.com',
-            'staging' => 'https://account.serato.xyz',
-            'preprod' => 'https://account.serato.biz',
-            'dev' => 'http://192.168.4.10',
-            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-apps.serato.net'
+            'production' => 'https://my.serato.com',
+            'staging' => 'https://my.serato.xyz',
+            'preprod' => 'https://my.serato.biz',
+            'dev' => 'http://localhost:8095',
+            'test' => 'https://my.serato.xyz'
         ],
+
         /**
          * My Serato 2.0 has 3 environments - prod, test (staging) and dev (localhost)
          * Test stacks are mapped to the staging environment (xyz)
