@@ -186,7 +186,6 @@ class HostName
         ],
 
         # Frontend apps served from CDN distributions wth unique domain names
-        # Frontend apps served from CDN distributions wth unique domain names
         self::STUDIO_WEB_APP => [
             'production' => 'https://studio.serato.com',
             'staging' => 'https://studio.serato.net',
