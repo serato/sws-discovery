@@ -34,7 +34,7 @@ class HostName
     public const REWARDS = 'rewards';
     public const VIDEO = 'video';
     public const AI_PROXY = 'ai-proxy';
-
+    public const CLOUD_LIBRARY = 'cloublib';
     public const FRONTEND = 'frontend';
     public const BACKEND = 'backend';
 
@@ -327,7 +327,19 @@ class HostName
             ],
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-ai-proxy.serato.net',
             'sws_host_key' => 'ai-proxy'
-        ]
+        ],
+        self::CLOUD_LIBRARY => [
+            'production' => 'https://cloudlib.serato.com',
+            'staging' => 'https://cloudlib.serato.xyz',
+            'dev2' => [
+                // DNS name for internal Docker `frontend` network (HTTP available on port 80)
+                self::BACKEND => 'http://sws-cloudlib',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8309'
+            ],
+            'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-cloudlib.serato.net',
+            'sws_host_key' => 'cloudlib'
+        ],
     ];
 
     /** @var string */
@@ -425,6 +437,8 @@ class HostName
      * - 'license'
      * - 'ecom'
      * - 'rewards'
+     * - 'ai-proxy'
+     * - 'cloudlib'
      *
      * @param string $variant   Determines which URL variant to return. Only relevant for some environments (eg "dev 2")
      *                          which require different URLs when used in a frontend or backend context.
