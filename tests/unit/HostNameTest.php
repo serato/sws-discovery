@@ -190,7 +190,7 @@ class HostNameTest extends TestCase
             ['dev', 2, HostName::MY_SERATO, 'localhost:8083'],
             ['dev', 2, HostName::SDJ_SIMULATOR, 'http://'],
             ['dev', 2, HostName::SDJ_SIMULATOR, 'localhost:8082'],
-            ['dev', 2, HostName::CLOUD_LIBRARY, 'sws-cloudlib', 'localhost:8309'],
+            ['dev', 2, HostName::CLOUD_LIBRARY, 'cloudlib', 'localhost:8309'],
 
             ['test', 2, HostName::SERATO_COM, '.net'],
             ['test', 2, HostName::SERATO_COM, 'https://test-2'],

@@ -335,7 +335,7 @@ class HostName
             'dev' => 'http://localhost:8309',
             'dev2' => [
                 // DNS name for internal Docker `frontend` network (HTTP available on port 80)
-                self::BACKEND => 'http://sws-cloudlib',
+                self::BACKEND => 'http://cloudlib',
                 // DNS name (and port) for "external" access
                 self::FRONTEND => 'http://localhost:8309'
             ],
