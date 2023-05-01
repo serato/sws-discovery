@@ -331,6 +331,8 @@ class HostName
         self::CLOUD_LIBRARY => [
             'production' => 'https://cloudlib.serato.com',
             'staging' => 'https://cloudlib.serato.xyz',
+            'preprod' => 'https://cloudlib.serato.biz',
+            'dev' => 'http://localhost:8309',
             'dev2' => [
                 // DNS name for internal Docker `frontend` network (HTTP available on port 80)
                 self::BACKEND => 'http://sws-cloudlib',
