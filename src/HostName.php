@@ -95,6 +95,12 @@ class HostName
             # No DNS entry for this (ie. doesn't exist in pre-prod):
             'preprod' => 'https://api.serato.biz',
             'dev' => 'http://192.168.5.2',
+            'dev2' => [
+                // DNS name (and port) for internal Docker `frontend` network
+                self::BACKEND => 'http://sptoex:8506',
+                // DNS name (and port) for "external" access
+                self::FRONTEND => 'http://localhost:8506'
+            ],
             # No test stacks exist and no DNS entries. So this is made up :-)
             'test' => 'https://test-' . self::TEST_STACK_NUM_PLACEHOLDER . '-api.serato.net'
         ],
