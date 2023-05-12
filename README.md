@@ -50,6 +50,8 @@ The keys of the array are as follows:
 - 'ecom'
 - 'rewards'
 - 'video'
+- 'ai-proxy'
+- 'cloudlib'
 
 ## Using Docker to develop this library.
 

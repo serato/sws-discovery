@@ -106,6 +106,10 @@ class HostNameTest extends TestCase
             ['production', 1, HostName::SDJ_SIMULATOR, 'https://sdjsim.serato.com'],
             ['production', 0, HostName::MY_SERATO, 'https://myserato.serato.com'],
             ['production', 0, HostName::SDJ_SIMULATOR, 'https://sdjsim.serato.com'],
+            ['production', 0, HostName::CLOUD_LIBRARY, 'https://'],
+            ['production', 0, HostName::CLOUD_LIBRARY, '.com'],
+            ['production', 1, HostName::CLOUD_LIBRARY, 'https://'],
+            ['production', 1, HostName::CLOUD_LIBRARY, '.com'],
 
             ['test', 1, HostName::SERATO_COM, '.xyz'],
             ['test', 1, HostName::SERATO_COM, 'https://'],
@@ -124,6 +128,8 @@ class HostNameTest extends TestCase
             ['test', 1, HostName::VISUALIZER, 'https://'],
             ['test', 1, HostName::MY_SERATO, 'https://myserato.serato.xyz'],
             ['test', 1, HostName::SDJ_SIMULATOR, 'https://sdjsim.serato.xyz'],
+            ['test', 1, HostName::CLOUD_LIBRARY, '.xyz'],
+            ['test', 1, HostName::CLOUD_LIBRARY, 'https://'],
 
             ['test', 0, HostName::SERATO_COM, '.biz'],
             ['test', 0, HostName::SERATO_COM, 'https://'],
@@ -184,6 +190,7 @@ class HostNameTest extends TestCase
             ['dev', 2, HostName::MY_SERATO, 'localhost:8083'],
             ['dev', 2, HostName::SDJ_SIMULATOR, 'http://'],
             ['dev', 2, HostName::SDJ_SIMULATOR, 'localhost:8082'],
+            ['dev', 2, HostName::CLOUD_LIBRARY, 'cloudlib', 'localhost:8309'],
 
             ['test', 2, HostName::SERATO_COM, '.net'],
             ['test', 2, HostName::SERATO_COM, 'https://test-2'],
@@ -200,6 +207,8 @@ class HostNameTest extends TestCase
             ['test', 2, HostName::STUDIO_WEB_APP, 'https://'],
             ['test', 2, HostName::VISUALIZER, '.net'],
             ['test', 2, HostName::VISUALIZER, 'https://'],
+            ['test', 2, HostName::CLOUD_LIBRARY, '.net'],
+            ['test', 2, HostName::CLOUD_LIBRARY, 'https://'],
             ['test', 2, HostName::MY_SERATO, 'https://myserato.serato.xyz'],
             ['test', 2, HostName::SDJ_SIMULATOR, 'https://sdjsim.serato.xyz'],
 
@@ -218,6 +227,8 @@ class HostNameTest extends TestCase
             ['test', 12, HostName::STUDIO_WEB_APP, 'https://'],
             ['test', 12, HostName::VISUALIZER, '.net'],
             ['test', 12, HostName::VISUALIZER, 'https://'],
+            ['test', 12, HostName::CLOUD_LIBRARY, '.net'],
+            ['test', 12, HostName::CLOUD_LIBRARY, 'https://'],
             ['test', 12, HostName::MY_SERATO, 'https://myserato.serato.xyz'],
             ['test', 12, HostName::SDJ_SIMULATOR, 'https://sdjsim.serato.xyz']
         ];
