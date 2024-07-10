@@ -72,7 +72,7 @@ class HostNameTest extends TestCase
     }
 
     /**
-     * @return array<array>
+     * @return array<mixed,mixed>
      */
     public function smokeTestProvider(): array
     {
